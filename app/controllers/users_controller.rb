@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    User.create(username: params[:user][:username], password: params[:user][:password], admin: params[:user][:admin])
+    User.create(username: params[:user][:username], password: params[:user][:password], admin: false)
     redirect_to  new
   end
 
